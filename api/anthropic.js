@@ -67,7 +67,7 @@ export default async function handler(req, res) {
     return json(res, 400, { error: "messages array is required" });
   }
 
-  const payload = { model: "claude-sonnet-4-20250514", max_tokens: 1000, messages };
+  const payload = { model: "claude-sonnet-4-6", max_tokens: 1000, messages };
   if (search) payload.tools = [{ type: "web_search_20250305", name: "web_search" }];
 
   try {
